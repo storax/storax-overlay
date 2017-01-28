@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+	<repo priority="50"
+	      quality="experimental"
+	      status="unofficial">
+		<name>storax-overlay</name>
+		<description lang="en">
+      Storax Overlay contains ebuilds for projects
+      that are not in the official Portage tree
+      but are of personal interest to me.
+		</description>
+		<homepage>https://github.com/storax/storax-overlay</homepage>
+		<owner type="person">
+			<email>zuber.david@gmx.de</email>
+			<name>David Zuber</name>
+		</owner>
+		<source type="git">git://github.com/storax/storax-overlay.git</source>
+		<feed>https://github.com/storax/storax-overlay/commits/master.atom</feed>
+	</repo>
+</repositories>
