@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zuber.david@gmx.de</email>
+		<name>David Zuber</name>
+		<description>Maintains this ebuild.</description>
+	</maintainer>
+	<use>
+		<flag name="alsa">Enables support for ALSA volume controls for internal/volume</flag>
+		<flag name="curl">Enables support for HTTP dependent modules like internal/github</flag>
+		<flag name="i3">Enable support for i3bar protocol</flag>
+		<flag name="mpd">Enables support for display of mpd controlled music</flag>
+		<flag name="network">Enables network monitoring features</flag>
+		<flag name="verbose-debug">Enables verbose debug messages</flag>
+		<flag name="xrender">Enables XRender window extension support (transparency)</flag>
+		<flag name="xdamage">Enables XDamage window extension support</flag>
+		<flag name="xsync">Enables XSync window extension support</flag>
+	</use>
+</pkgmetadata>
