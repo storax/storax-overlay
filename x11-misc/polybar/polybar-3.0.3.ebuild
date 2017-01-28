@@ -8,7 +8,7 @@ DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1 cmake-utils toolchain-funcs versionator
 
-XPP_ECOMMIT="61f42bbca835b3cf9968de42fd46ffe404b73dca"
+XPP_ECOMMIT="49ed2c142109fe92932ae906fc4b40b5138b2809"
 I3IPCPP_ECOMMIT="8ed783100bbc8053fd7d8e19cef58cd097ff23f7"
 
 DESCRIPTION="A fast and easy-to-use status bar"
