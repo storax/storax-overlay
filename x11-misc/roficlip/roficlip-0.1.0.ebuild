@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,7 +12,7 @@ ECOMMIT="214aaac8fee3ec884e4f95a5266402fefc8e70a8"
 
 DESCRIPTION="Use parcellite via Rofi"
 HOMEPAGE="https://github.com/seamus/${PN}"
-SRC_URI="https://github.com/seamus/${PN}/archive/${ECOMMIT}.zip -> ${PF}.zip"
+SRC_URI="https://github.com/seamus-45/${PN}/archive/${ECOMMIT}.zip -> ${PF}.zip"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -22,17 +22,16 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND="${PYTHON_DEPS}
-  x11-misc/rofi
-  x11-misc/parcellite
-  dev-python/pygobject[${PYTHON_USEDEP}]
-  dev-python/pygtk[${PYTHON_USEDEP}]
-  dev-python/pyyaml[${PYTHON_USEDEP}]
-  dev-python/notify-python[${PYTHON_USEDEP}]
-  dev-python/pyxdg[${PYTHON_USEDEP}]
-  dev-python/docopt[${PYTHON_USEDEP}]"
+	x11-misc/rofi
+	x11-misc/parcellite
+	dev-python/pygobject[${PYTHON_USEDEP}]
+	dev-python/pygtk[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
+	dev-python/notify-python[${PYTHON_USEDEP}]
+	dev-python/pyxdg[${PYTHON_USEDEP}]
+	dev-python/docopt[${PYTHON_USEDEP}]"
 DEPEND=""
 
 src_install() {
-  python_foreach_impl python_doscript ${PN}.py
+	python_foreach_impl python_doscript ${PN}.py
 }
-
