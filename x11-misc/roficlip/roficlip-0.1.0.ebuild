@@ -12,7 +12,8 @@ ECOMMIT="214aaac8fee3ec884e4f95a5266402fefc8e70a8"
 
 DESCRIPTION="Use parcellite via Rofi"
 HOMEPAGE="https://github.com/seamus/${PN}"
-SRC_URI="https://github.com/seamus-45/${PN}/archive/${ECOMMIT}.zip -> ${PF}.zip"
+SRC_URI="https://github.com/seamus-45/${PN}/archive/${ECOMMIT}.tar.gz -> ${PF}.tar.gz"
+S="${WORKDIR}/${PN}-${ECOMMIT}"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
