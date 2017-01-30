@@ -34,5 +34,5 @@ RDEPEND="${PYTHON_DEPS}
 DEPEND=""
 
 src_install() {
-	python_foreach_impl python_doscript ${PN}.py
+	python_doscript ${PN}.py
 }
