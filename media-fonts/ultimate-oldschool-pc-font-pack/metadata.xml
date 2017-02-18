@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>zuber.david@gmx.de</email>
+		<name>David Zuber</name>
+		<description>Maintains this ebuild.</description>
+	</maintainer>
+	<use>
+		<flag name="px437">Install fonts with limited character sets</flag>
+		<flag name="pxplus">Install fonts with extended character sets</flag>
+	</use>
+</pkgmetadata>
