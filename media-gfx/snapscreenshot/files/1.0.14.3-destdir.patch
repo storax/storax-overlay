@@ -1,0 +1,15 @@
+--- Makefile	2017-02-19 03:12:24.685499468 +0000
++++ Makefile.patch	2017-02-19 03:12:16.990499239 +0000
+@@ -13,8 +13,10 @@
+ CXXFLAGS=-Wall -W -pedantic
+ CFLAGS=-Wall -W -pedantic -O3
+ INSTALL=install
+-BINDIR=/usr/local/bin
+-MANDIR=/usr/local/man
++PREFIX?=/usr/
++target=$(DESTDIR)$(PREFIX)
++BINDIR=$(target)/local/bin
++MANDIR=$(target)/local/man
+ 
+ PROG=snapscreenshot
+ OBJS=snapscreenshot.o argh.o
