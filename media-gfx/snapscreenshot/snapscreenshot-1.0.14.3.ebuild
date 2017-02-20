@@ -19,6 +19,6 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-    eapply_user
-    epatch "${FILESDIR}/${PV}-destdir.patch"
+	eapply_user
+	epatch "${FILESDIR}/${PV}-destdir.patch"
 }
