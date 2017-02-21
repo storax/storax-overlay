@@ -31,13 +31,10 @@ DEPEND="test? ( ${RDEPEND}
 
 S=${WORKDIR}/Mopidy-${PV}
 
-pkg_setup() {
+src_install() {
 	enewgroup mopidy
 	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
-}
-
-src_install() {
-	distutils-r1_python_install_all
+	python_install_all
 	dobin extra/mopidyctl/mopidyctl
 	doman extra/mopidyctl/mopidyctl.8
 
