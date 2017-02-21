@@ -37,7 +37,7 @@ pkg_setup() {
 }
 
 src_install() {
-	default
+	distutils-r1_src_install
 	dobin extra/mopidyctl/mopidyctl
 	doman extra/mopidyctl/mopidyctl.8
 
