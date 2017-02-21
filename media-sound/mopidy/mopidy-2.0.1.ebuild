@@ -37,7 +37,7 @@ pkg_setup() {
 }
 
 src_install() {
-	python_install_all
+	default
 	dobin extra/mopidyctl/mopidyctl
 	doman extra/mopidyctl/mopidyctl.8
 
