@@ -12,7 +12,6 @@ DESCRIPTION="A fast and easy-to-use status bar"
 HOMEPAGE="https://github.com/jaagr/${PN}"
 
 EGIT_REPO_URI="https://github.com/jaagr/${PN}"
-EGIT_HAS_SUBMODULES=1
 
 LICENSE="MIT"
 SLOT="0"
