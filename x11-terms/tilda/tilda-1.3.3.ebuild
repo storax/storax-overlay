@@ -1,13 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
 inherit eutils autotools
 
 DESCRIPTION="A drop down terminal, similar to the consoles found in the first person shooters"
-HOMEPAGE="http://github.com/lanoxx/tilda"
+HOMEPAGE="https://github.com/lanoxx/tilda"
 
 if [[ ${PV} == *9999* ]];then
 	inherit git-r3
