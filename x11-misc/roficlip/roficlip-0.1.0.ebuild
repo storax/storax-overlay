@@ -23,7 +23,6 @@ RESTRICT="mirror"
 
 RDEPEND="${PYTHON_DEPS}
 	x11-misc/rofi
-	x11-misc/parcellite
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/pygtk[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
