@@ -15,16 +15,20 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-RDEPEND=">=dev-python/pykka-1.1[${PYTHON_USEDEP}]
+RDEPEND="
+	>=dev-python/pykka-1.1[${PYTHON_USEDEP}]
 	>=dev-python/pyspotify-2.0.5[${PYTHON_USEDEP}]
 	>=media-sound/mopidy-2.0[${PYTHON_USEDEP}]
-	>=dev-python/requests-2.0[${PYTHON_USEDEP}]"
+	>=dev-python/requests-2.0[${PYTHON_USEDEP}]
+"
 
-DEPEND="test? ( ${RDEPEND}
+DEPEND="
+	test? ( ${RDEPEND}
 	dev-python/pytest[${PYTHON_USEDEP}]
 	dev-python/pytest-capturelog[${PYTHON_USEDEP}]
 	dev-python/responses[${PYTHON_USEDEP}] )
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+"
 
 DOCS=( README.rst )
 
