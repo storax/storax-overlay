@@ -28,6 +28,4 @@ src_install() {
 	insinto /usr/share/icons
 	doins -r Numix-Circle Numix-Circle-Light
 	dodoc README.md
-	insinto /usr/share/licenses/${PN}
-	doins LICENSE
 }
