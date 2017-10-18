@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}"
 src_install() {
 	insinto /usr/share/icons
 	doins -r Numix Numix-Light
-	dodoc readme.md
+	dodoc README.md
 	insinto /usr/share/licenses/${PN}
 	doins license
 }
