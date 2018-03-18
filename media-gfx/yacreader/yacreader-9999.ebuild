@@ -24,10 +24,14 @@ IUSE=""
 
 DEPEND="
 	dev-qt/qtcore:5
+  dev-qt/qtwidgets:5
+  dev-qt/qtnetwork:5
 	dev-qt/qtmultimedia:5
 	app-text/poppler[qt5]
 	dev-qt/qtdeclarative:5
   dev-qt/qtopengl:5
+  dev-qt/qtsql:5
+  dev-qt/qtscript:5
 	virtual/glu
 	dev-qt/qtquickcontrols:5
 	dev-util/desktop-file-utils
