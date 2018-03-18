@@ -6,8 +6,8 @@ EAPI=6
 inherit cmake-utils git-r3
 
 DESCRIPTION="A lightweight decompression library with support for rar, tar and zip archives"
-HOMEPAGE="http://github.com/zeniko/unarr"
-SRC_URI="https://raw.githubusercontent.com/selmf/${PN}/master/CMakeLists.txt"
+HOMEPAGE="https://github.com/selmf/${PN}"
+SRC_URI=""
 EGIT_REPO_URI="${HOMEPAGE}"
 
 LICENSE="LGPL-3"
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND="
 	sys-libs/zlib
 	app-arch/bzip2
+  app-arch/xz-utils
 "
 RDEPEND="${DEPEND}"
 
