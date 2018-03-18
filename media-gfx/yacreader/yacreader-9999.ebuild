@@ -27,6 +27,7 @@ DEPEND="
 	dev-qt/qtmultimedia:5
 	app-text/poppler[qt5]
 	dev-qt/qtdeclarative:5
+  dev-qt/qtopengl:5
 	virtual/glu
 	dev-qt/qtquickcontrols:5
 	dev-util/desktop-file-utils
