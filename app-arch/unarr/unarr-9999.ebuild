@@ -23,6 +23,5 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare(){
-	cp ${DISTDIR}/CMakeLists.txt . || die
 	eapply_user
 }
