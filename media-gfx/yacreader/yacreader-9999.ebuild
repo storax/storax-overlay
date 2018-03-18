@@ -9,10 +9,10 @@ DESCRIPTION="A comic reader for reading and managing your digital comic collecti
 HOMEPAGE="http://www.yacreader.com"
 
 if [[ ${PV} == *9999* ]];then
-	inherit git-r3
+	inherit mercurial
 	SRC_URI=""
 	KEYWORDS=""
-	EGIT_REPO_URI="https://bitbucket.org/luisangelsm/${PN}"
+	EHG_REPO_URI="https://bitbucket.org/luisangelsm/${PN}"
 else
 	SRC_URI="https://bitbucket.org/luisangelsm/${PN}/downloads/${P}-src.tar.xz"
 	KEYWORDS="~x86 ~amd64 ~arm"
