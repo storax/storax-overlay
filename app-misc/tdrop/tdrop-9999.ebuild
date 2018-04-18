@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/noctuid/${PN}"
 SRC_URI=""
 EGIT_REPO_URI="${HOMEPAGE}"
 
-LICENSE="LGPL-3"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="tmux sxhkd xrandr"
