@@ -12,17 +12,17 @@ EGIT_REPO_URI="${HOMEPAGE}"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~arm"
+KEYWORDS="~amd64"
 IUSE="tmux sxhkd xrandr"
 
 DEPEND=""
 RDEPEND="
-  app-shells/bash
-  x11-misc/xdotool
-  x11-apps/xwininfo
-  x11-apps/xprop
-  tmux? ( app-misc/tmux )
-  sxhkd? ( x11-misc/sxhkd )
-  xrandr? ( x11-apps/xrandr )
+	app-shells/bash
+	x11-misc/xdotool
+	x11-apps/xwininfo
+	x11-apps/xprop
+	tmux? ( app-misc/tmux )
+	sxhkd? ( x11-misc/sxhkd )
+	xrandr? ( x11-apps/xrandr )
 "
 src_compile() { :; }

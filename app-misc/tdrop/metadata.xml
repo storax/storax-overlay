@@ -6,4 +6,9 @@
 		<name>David Zuber</name>
 		<description>Maintains this ebuild.</description>
 	</maintainer>
+	<use>
+		<flag name="tmux">Session starting support</flag>
+		<flag name="xrandr">Multi monitor resizing support</flag>
+		<flag name="sxhkd">tdrop keybinding</flag>
+	</use>
 </pkgmetadata>
