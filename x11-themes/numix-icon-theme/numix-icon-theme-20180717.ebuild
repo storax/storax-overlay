@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,9 +12,9 @@ if [[ ${PV} == *99999999* ]] ; then
 	EGIT_REPO_URI="https://github.com/numixproject/${PN}.git"
 	KEYWORDS=""
 else
-	MY_PV="${PV:2:2}-${PV:4:2}-${PV:6:2}"
+	MY_PV="${PV:2:2}.${PV:4:2}.${PV:6:2}"
 	SRC_URI="https://github.com/numixproject/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~arm"
+	KEYWORDS="~amd64 ~arm ~x86"
 	S="${WORKDIR}/${PN}-${MY_PV}"
 fi
 

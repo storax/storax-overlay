@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -13,7 +13,7 @@ SRC_URI="amd64? ( ${BASE_URI}x86_64-release.tar.gz )
 
 LICENSE="Spotify"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 -*"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/pkgconfig"

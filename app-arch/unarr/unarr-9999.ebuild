@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,13 +12,13 @@ EGIT_REPO_URI="${HOMEPAGE}"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 DEPEND="
 	sys-libs/zlib
 	app-arch/bzip2
-  app-arch/xz-utils
+	app-arch/xz-utils
 "
 RDEPEND="${DEPEND}"
 
