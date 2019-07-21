@@ -1,20 +1,20 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit qmake-utils eutils xdg-utils
+inherit qmake-utils eutils fdo-mime
 
 DESCRIPTION="A comic reader for reading and managing your digital comic collection"
 HOMEPAGE="http://www.yacreader.com"
 
-if [[ ${PV} == *9999* ]];then
-	inherit mercurial
+if [[ ${PV} == 9999 ]];then
+	inherit git-r3
 	SRC_URI=""
 	KEYWORDS=""
-	EHG_REPO_URI="https://bitbucket.org/luisangelsm/${PN}"
+	EGIT_REPO_URI="https://github.com/YACReader/${PN}.git"
 else
-	SRC_URI="https://bitbucket.org/luisangelsm/${PN}/downloads/${P}-src.tar.xz"
+	SRC_URI="https://github.com/YACReader/${PN}/releases/download/${PV}/${P}-src.tar.xz"
 	KEYWORDS="~x86 ~amd64 ~arm"
 fi
 
@@ -24,21 +24,13 @@ IUSE=""
 
 DEPEND="
 	dev-qt/qtcore:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtconcurrent:5
 	dev-qt/qtmultimedia:5
 	app-text/poppler[qt5]
 	dev-qt/qtdeclarative:5
-	dev-qt/qtopengl:5
-	dev-qt/qtsql:5
-	dev-qt/qtscript:5
 	virtual/glu
 	dev-qt/qtquickcontrols:5
 	dev-util/desktop-file-utils
 	app-arch/unarr
-	dev-qt/qtimageformats
-	app-arch/unzip
 "
 RDEPEND="${DEPEND}"
 
@@ -51,8 +43,8 @@ src_install(){
 }
 
 pkg_postinst(){
-	xdg_mimeinfo_database_update
-	xdg_desktop_database_update
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
 	echo
 	elog "Additional packages are required to open the most common comic archives:"
 	elog
@@ -71,6 +63,6 @@ pkg_postinst(){
 }
 
 pkg_postrm(){
-	xdg_mimeinfo_database_update
-	xdg_desktop_database_update
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
 }
