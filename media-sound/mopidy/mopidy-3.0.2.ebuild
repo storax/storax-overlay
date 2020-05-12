@@ -1,10 +1,10 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-PYTHON_COMPAT=(python2_7)
+EAPI=7
+PYTHON_COMPAT=(python3_6 python3_7 python3_8)
 
-inherit user eutils systemd distutils-r1
+inherit eutils systemd distutils-r1
 
 DESCRIPTION="An extensible music server that plays music from local disk and more"
 HOMEPAGE="http://mopidy.com https://github.com/mopidy/mopidy"
@@ -23,17 +23,14 @@ RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	www-servers/tornado[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
+	acct-group/mopidy
+	acct-user/mopidy
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/pytest[${PYTHON_USEDEP}]
 	dev-python/responses[${PYTHON_USEDEP}] )
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Mopidy-${PV}
-
-pkg_setup() {
-	enewgroup mopidy
-	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
-}
 
 src_install() {
 	distutils-r1_src_install

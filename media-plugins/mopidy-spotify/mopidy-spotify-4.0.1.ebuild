@@ -1,8 +1,8 @@
-# Copyright 1999-2019 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-PYTHON_COMPAT=(python2_7)
+EAPI=7
+PYTHON_COMPAT=(python3_6 python3_7 python3_8)
 
 inherit vcs-snapshot distutils-r1
 
@@ -16,9 +16,9 @@ KEYWORDS="~amd64"
 IUSE="test"
 
 RDEPEND="
-	>=dev-python/pykka-1.1[${PYTHON_USEDEP}]
+	>=dev-libs/libspotify-12.1.51
 	>=dev-python/pyspotify-2.0.5[${PYTHON_USEDEP}]
-	>=media-sound/mopidy-2.0[${PYTHON_USEDEP}]
+	>=media-sound/mopidy-3.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.0[${PYTHON_USEDEP}]
 "
 
