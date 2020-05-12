@@ -39,7 +39,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	systemd_dounit extra/systemd/mopidy.service
-	domenu extra/desktop/mopidy.desktop || die
 
 	einfo
 	elog "Don't forget to add the mopidy user to the audio group"
