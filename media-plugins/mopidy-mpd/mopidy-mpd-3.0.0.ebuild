@@ -19,8 +19,7 @@ RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	media-sound/mopidy[${PYTHON_USEDEP}]
 "
 
-DEPEND="test? ( ${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Mopidy-MPD-${PV}
 
