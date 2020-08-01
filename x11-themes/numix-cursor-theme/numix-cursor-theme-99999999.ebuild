@@ -1,31 +1,41 @@
 # Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+inherit gnome2 git-r3
 
-DESCRIPTION="Official icon theme from the Numix project."
-HOMEPAGE="https://numixproject.org"
+DESCRIPTION="Numix Project cursor icon theme"
+HOMEPAGE="http://numixproject.org"
+SRC_URI=""
 
-if [[ ${PV} == *99999999* ]] ; then
-	inherit git-r3
-	SRC_URI=""
-	EGIT_REPO_URI="https://github.com/numixproject/${PN}.git"
-	KEYWORDS=""
-else
-	MY_PV="${PV:2:2}.${PV:4:2}.${PV:6:2}"
-	SRC_URI="https://github.com/numixproject/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
-	S="${WORKDIR}/${PN}-${MY_PV}"
-fi
+EGIT_REPO_URI="https://github.com/numixproject/numix-cursor-theme.git"
 
-LICENSE="GPL-3"
+LICENSE="GPLv3"
 SLOT="0"
+KEYWORDS=""
+IUSE=""
 
-DEPEND=""
+DEPEND="app-shells/bash
+        media-gfx/inkscape
+        x11-apps/xcursorgen"
 RDEPEND="${DEPEND}"
 
-src_install() {
-	insinto /usr/share/icons
-	doins -r Numix-Cursor Numix-Cursor-Light
-	dodoc README.md
+RESTRICT="binchecks strip"
+
+src_configure() { true; }
+
+src_compile() {
+  bash ./build.sh
+  gnome2_src_compile
 }
+
+src_install() {
+  dodoc README.md
+  dodoc LICENSE
+  mkdir -p ${D}/usr/share/icons
+  cp -r ${S}/Numix-Cursor ${D}/usr/share/icons/
+  cp -r ${S}/Numix-Cursor-Light ${D}/usr/share/icons/
+}
+
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
