@@ -26,6 +26,6 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	insinto /usr/share/icons
-	doins -r Numix Numix-Light
+	doins -r Numix-Cursor Numix-Cursor-Light
 	dodoc README.md
 }
