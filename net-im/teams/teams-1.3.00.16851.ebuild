@@ -34,7 +34,7 @@ RDEPEND="
 	media-libs/alsa-lib
 	media-libs/fontconfig
 	media-libs/mesa
-	system-ffmpeg? (media-video/ffmpeg[chromium])
+	system-ffmpeg? ( media-video/ffmpeg[chromium] )
 	net-print/cups
 	sys-apps/dbus
 	sys-apps/util-linux
