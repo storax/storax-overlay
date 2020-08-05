@@ -7,9 +7,7 @@ inherit multilib
 
 DESCRIPTION="C API package to utilize the Spotify music streaming service"
 HOMEPAGE="https://developer.spotify.com/technologies/libspotify/"
-BASE_URI="https://developer.spotify.com/download/libspotify/${P}-Linux-"
-SRC_URI="amd64? ( ${BASE_URI}x86_64-release.tar.gz )
-	x86? ( ${BASE_URI}i686-release.tar.gz )"
+SRC_URI="https://github.com/mopidy/libspotify-archive/blob/master/libspotify-12.1.51-Linux-x86_64-release.tar.gz?raw=true -> ${P}.tar.gz"
 
 LICENSE="Spotify"
 SLOT="0"
@@ -20,9 +18,7 @@ DEPEND="virtual/pkgconfig"
 
 QA_PRESTRIPPED="/usr/$(get_libdir)/${PN}.so.${PV}"
 
-T_ARCH=${ARCH/x86/i686}
-T_ARCH=${T_ARCH/amd64/x86_64}
-S=${WORKDIR}/${P}-Linux-${T_ARCH}-release
+S=${WORKDIR}/${P}-Linux-x86_64-release
 
 src_prepare() {
 	sed -i -e 's#PKG_PREFIX:$(prefix)#PKG_PREFIX:$(real_prefix)#'\
