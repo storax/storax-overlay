@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="virtual/pkgconfig"
 
-QA_PRESTRIPPED="/usr/$(get_libdir)/${PN}.so.${PV}"
+QA_PRESTRIPPED="/usr/lib64/${PN}.so.${PV}"
 
 S=${WORKDIR}/${P}-Linux-x86_64-release
 
