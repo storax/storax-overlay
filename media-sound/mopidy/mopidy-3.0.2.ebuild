@@ -20,7 +20,7 @@ RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	>=media-plugins/gst-plugins-meta-1.0-r2:1.0[http,mp3]
-	www-servers/tornado[${PYTHON_USEDEP}]"
+	dev-python/tornado[${PYTHON_USEDEP}]"
 
 DEPEND="test? ( ${RDEPEND}
 	acct-group/mopidy
